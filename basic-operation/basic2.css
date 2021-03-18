@@ -1,0 +1,46 @@
+h1 {
+    text-align:center;
+    color:rgb(19, 98, 151);
+}
+
+
+a {
+    text-decoration: none;
+    text-align:center;
+    color:darkcyan;
+}
+
+a:hover {
+    color:rgb(3, 70, 70);
+}
+
+section {
+    color:rgb(19, 98, 151);
+    text-align: center;
+   
+}
+
+table {
+    margin:30px auto;
+   padding-right:130px;
+    width:600px;
+    
+}
+
+table tr {
+    text-align: right;
+}
+
+table tr td {
+    padding:10px;
+    display: inline-block;
+   
+}
+table tr td {
+    text-align: right;
+   
+}
+body {
+    margin:0px;
+}
+

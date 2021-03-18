@@ -1,0 +1,71 @@
+h1, h2 {
+    margin-left: 10px;
+    color:rgb(19, 98, 151);
+}
+
+
+a {
+    text-decoration: none;
+    
+    margin-left:10px;
+    padding-bottom:10px;
+    color:darkcyan;
+}
+
+a:hover {
+    color:rgb(3, 70, 70);
+}
+
+section {
+    color:rgb(19, 98, 151);
+   
+   
+}
+
+table {
+    width:570px;
+}
+
+table tr th {
+    padding:10px;
+    /* display: inline-block;
+   */
+}
+
+table tr td {
+   
+    text-align: right;
+
+}
+
+table tr td label {
+    margin-left:10px;
+    display: inline-block;
+    text-align: left;
+}
+
+label {
+    display:inline-block;
+    width:auto;
+    margin-left: 10px;
+}
+
+body {
+    margin:0px;
+}
+
+input {
+    margin-bottom:10px;
+    display: inline-block;
+    text-align: right;
+}
+
+
+label.error {
+    float:none;
+    clear:both;
+    font-size:12px;
+    text-align: left;
+}
+
+

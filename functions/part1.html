@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="description" content="summary of what this page is about">
+<title>Javascript - Functions</title>
+
+<link rel="stylesheet" href="func.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.13.1/jquery.validate.min.js"></script>
+
+<style>
+
+    #table1 {
+        width:300px;
+        color:brown;
+    }
+
+    #table1 tr td {
+        text-align:center;
+    }
+
+    #table2 {
+        width:600px;
+    }
+
+   input {
+       margin:10px;
+   }
+
+    label {
+        display: inline-block;
+        margin-left: 10px;
+        width:150px;
+        text-align:left;
+        
+    }
+
+    #buttonPlacement1 {
+       
+        width:320px;
+        text-align: center;
+       
+    }
+
+    #container {
+
+        width:600px;
+    }
+    
+</style>
+<script>
+    $(document).ready(function() {
+        
+        $("#myForm").validate({
+            rules: 
+                {
+                hwAvg: {required:true, number:true, min:0, max:100},
+                midExam: {required:true, number:true, min:0, max:100},
+                finalExam: {required:true, number:true, min:0, max:100},
+                participation: {required:true, number:true, min:0, max:100}
+                   }
+                
+        });
+    });
+
+    function process() {
+
+        if ($("#myForm").valid()){
+            
+            hwAvg = parseInt(document.getElementById("hwAvg").value);
+            midExam = parseInt(document.getElementById("midExam").value);
+            finalExam = parseInt(document.getElementById("finalExam").value);
+            participation = parseInt(document.getElementById("participation").value);
+
+            var finalAve;
+            finalAve = (.5 * hwAvg) + (.2 * midExam) + (.2 * finalExam) + (.1 * participation);
+
+            document.getElementById("finalAverage").value = Math.round(finalAve);
+
+            switch (true) {
+              
+                case finalAve>=90 && finalAve<=100:
+                    
+                        document.getElementById("finalLetterGrade").value="A";
+                        document.getElementById("comment").innerHTML = "";    
+                    break;
+                case  finalAve>=80 && finalAve<=89:
+                  
+                        document.getElementById("finalLetterGrade").value="B";
+                        document.getElementById("comment").innerHTML = "";
+                    break;    
+
+                case finalAve>=70 && finalAve<=79:
+                    
+                        document.getElementById("finalLetterGrade").value="C";
+                        document.getElementById("comment").innerHTML = "";
+                    break;  
+                case finalAve>=60 && finalAve<=69:
+                    
+                        document.getElementById("finalLetterGrade").value="D";
+                        document.getElementById("comment").innerHTML = "Student must retake the course";
+           
+                    break;
+                
+                    case finalAve>=0 && finalAve<=59:
+                    
+                        document.getElementById("finalLetterGrade").value="F";
+                        document.getElementById("comment").innerHTML = "Student must retake the course";
+                 
+                    break;    
+
+            }
+        }
+
+    };
+
+    function process1 () {
+        document.getElementById("comment").innerHTML = "";
+    };
+
+</script>
+</head>
+<body>
+
+<header>
+    <h1>Part 1: Student Grades</h1>
+</header>
+<section>
+    
+    <table id="table1">
+        <tr>
+            <th>Final Average Score</th>
+            <th>Final Letter Grade</th>
+        </tr>
+        <tr>
+            <td>90-100</td>
+            <td>A</td>
+        </tr>
+        <tr>
+            <td>80-89</td>
+            <td>B</td>
+        </tr>
+        <tr>
+            <td>70-79</td>
+            <td>C</td>
+        </tr>
+        <tr>
+            <td>60-69</td>
+            <td>D</td>
+        </tr>
+        <tr>
+            <td>0-59</td>
+            <td>F</td>
+        </tr>
+        
+    </table>
+    <p style="color:brown; margin-left:10px;">(Student must retake the course when the Final Letter Grade is D or F)</p>
+   <form id="myForm">
+       <div id="container">
+            <label>Homework Average: </label>
+            <input type="number" id="hwAvg" name="hwAvg">
+
+            <p><label>Mid-term Exam Score: </label>
+             <input type="number" id="midExam" name="midExam"></p>
+
+             <p><label>final Exam Score: </label>
+          <input type="number" id="finalExam" name="finalExam"></p>
+            
+          <p><label>Participation: </label>
+            <input type="number" id="participation" name="participation"></P>
+        </div>
+    
+       <div id="buttonPlacement1">
+            <input type="button" onclick="process()" value="SUBMIT"> 
+            <input type="reset"  onclick="process1()" value="RESET"><br>
+        </div>
+        <div id="table2">
+                <p><label for="finalAverage">Final Average Score: </label>
+                <input type="text" id="finalAverage"  name="finalAverage" readonly></p>
+                
+                <p><label for="finalLetterGrade" >Final Letter Grade: </label>
+                <input type="text" id="finalLetterGrade" name="finalLetterGrade" readonly></p>
+        </table>     
+            <!-- <label for="comment">Comment: </label>
+            <input type="text" id="comment" name="comment" readonly> -->
+
+            <div id="comment"></div>
+
+   </form>
+   <a href="functions3.html">Back to the main page</a>
+   <a href="../homepage/index.html">Back to homepage</a>
+</section>
+
+<footer>
+</footer>
+
+</body>
+
+</html>

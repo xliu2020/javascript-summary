@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="description" content="summary of what this page is about">
+<title>Javascript - Functions</title>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <link rel="stylesheet" href="func.css">
+<style>
+
+p {
+    margin-left:10px;
+}
+
+table {
+    width:570px;
+}
+
+
+table tr td {
+  
+    text-align: center;
+
+}
+
+#input {
+    margin-left: 10px;
+}
+
+input {
+    margin: 10px;
+}
+
+table label {
+       
+       display: inline-block;
+        width:50px;
+        text-align:center;
+   }
+
+
+#table2 label {
+       width:280px;
+       text-align: right;
+       display: inline-block;
+   }
+
+   
+    
+
+</style>
+ <script>
+     $(function() {
+         $("#salesperson").tooltip({
+             track:true,
+             
+         });
+     });
+</script>
+<script> 
+     function process() {
+
+        var num1, num2, num3, num4;
+         num1 = parseInt(document.getElementById("item1").value);
+         num2 = parseInt(document.getElementById("item2").value);
+         num3 = parseInt(document.getElementById("item3").value);
+         num4 = parseInt(document.getElementById("item4").value);
+
+         if (num1 < 0 || num2 < 0 || num3 < 0 || num4 < 0) {
+                alert("the number you enter cannot be a negative number.");
+                document.getElementById("item1").value = "";
+                document.getElementById("item2").value = "";
+                document.getElementById("item3").value = "";
+                document.getElementById("item4").value = "";
+                
+         } else if (isNaN(num1) == true || isNaN(num2) == true ||isNaN(num3) == true || isNaN(num4) == true ) {
+
+             alert("Number is required to be entered.");
+             document.getElementById("item1").value = "";
+                document.getElementById("item2").value = "";
+                document.getElementById("item3").value = "";
+                document.getElementById("item4").value = "";
+         } else {
+         
+            soldnum1 = 239.99 * num1;
+            soldnum2 = 129.75 * num2;
+            soldnum3 = 99.95 * num3;
+            soldnum4 = 350.89 * num4;
+
+            document.getElementById("soldnum1").value=soldnum1.toFixed(2);
+            document.getElementById("soldnum2").value=soldnum2.toFixed(2);
+            document.getElementById("soldnum3").value=soldnum3.toFixed(2);
+            document.getElementById("soldnum4").value=soldnum4.toFixed(2);
+
+            earnamt1 = 200 + 0.09 * 239.99 * num1;
+            earnamt2 = 200 + 0.09 * 129.75 * num2;
+            earnamt3 = 200 + 0.09 * 99.95 * num3;
+            earnamt4 = 200 + 0.09 * 350.89 * num4;
+
+            document.getElementById("earn1").value=earnamt1.toFixed(2);
+            document.getElementById("earn2").value=earnamt2.toFixed(2);
+            document.getElementById("earn3").value=earnamt3.toFixed(2);
+            document.getElementById("earn4").value=earnamt4.toFixed(2);
+
+            totalAmt = soldnum1 + soldnum2 + soldnum3 + soldnum4;
+            totalEarn = earnamt1 + earnamt2 + earnamt3 + earnamt4;
+
+            document.getElementById("soldamount").value=totalAmt.toFixed(2);
+            document.getElementById("soldearn").value=totalEarn.toFixed(2);
+         };
+
+     };
+ </script>
+ 
+</head>
+<body>
+
+<header>
+    <h1>Part 2: Salesperson's Earning</h1>
+</header>
+
+<section>
+
+        <label for="salesperson">
+            <a href="#" title="Please make sure that the salesperson's name is spelled correctly" id="salesperson"> Salesperson: </a></label>
+        <input type="text" id="input" ><br>
+
+        <h2>Input the number of items sold for each item number:</h2>
+        <p>(The salesperson will receive 200$ per week plus 9% of their gross sales for that week) </p>
+
+    <form id="myForm">
+
+        <div id="input">
+            <label for="item1">Item 1: </label>
+            <input type="number" id="item1" name="item1"><br>
+
+            <label for="item2">Item 2: </label>
+            <input type="number" id="item2" name="item2"><br>
+
+            <label for="item3">Item 3: </label>
+            <input type="number" id="item3" name="item3"><br>
+                
+            <label for="item4">Item 4: </label>
+            <input type="number" id="item4" name="item4"><br>
+
+            <input type="button" onclick="process()" value="SUBMIT">
+            <input type="reset" value="RESET">
+        </div>   
+    
+            <table id="table1">
+                <tr>
+                    <th>Item #</th>
+                    <th>Price</th>
+                    <th>Amount Sold</th>
+                    <th>Total</th>
+                </tr>
+                <tr>
+                    <td><label for="soldnum1">1</label></td>
+                    <td>$239.99</td>
+                    <td><input type="text" id="soldnum1" name="soldnum1" readonly></td>
+                    <td><input type="text" id="earn1" name="earn1" readonly></td>
+                </tr>
+                <tr>
+                        <td><label for="soldnum2">2</label></td>
+                        <td>$129.75</td>
+                        <td><input type="text" id="soldnum2" name="soldnum2" readonly></td>
+                        <td><input type="text" id="earn2" name="earn2" readonly></td>
+                </tr>
+                <tr>
+                        <td><label for="soldnum3">3</label></td>
+                        <td>$99.95</td>
+                        <td><input type="text" id="soldnum3" name="soldnum3" readonly></td>
+                        <td><input type="text" id="earn3" name="earn3" readonly></td>
+                </tr>
+                <tr>
+                        <td><label for="soldnum4">4</label></td>
+                        <td>$350.89</td>
+                        <td><input type="text" id="soldnum4" name="soldnum4" readonly></td>
+                        <td><input type="text" id="earn4" name="earn4" readonly></td>
+                </tr>
+            </table>
+
+            <table id="table2">
+                <tr>
+                    <td><label for="soldamount" >Total Amount Sold:</label></td>
+                    <td><input type="text" id="soldamount" name="soldamount" readonly></td>
+                </tr>
+                </tr>
+                    <td><label for="soldearn" >Total Weekly Earnings:</label></td>
+                    <td><input type="text" id="soldearn" name="soldearn" readonly></td>
+                </tr>
+               
+            </table>
+
+    </form>
+
+   <a href="functions3.html">Back to the main page</a>
+   <a href="../homepage/index.html">Back to homepage</a>
+
+</section>
+
+<footer>
+</footer>
+
+</body>
+
+</html>

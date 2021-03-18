@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="description" content="summary of what this page is about">
+<title>Basic Operation - Part 2</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="part2.js" async></script>
+<script src="jquerypart2a.js" async></script>
+<link rel="stylesheet" href="basic2.css">
+<style>
+    #fadeout {
+        width:1000px;
+        height:30px;
+        background-color: rgb(7, 110, 110);
+        margin:10px auto;
+    }
+
+    section {
+        margin-top: 50px;
+    }
+</style>
+</head>
+<body>
+
+<header>
+    <h1> Basic Operations - Part 2</h1>
+</header>
+
+<section>
+   <form name="myform" id="myform">
+       <table>
+            <tr>
+               <td>First Integer:</td>
+               <td><input type="text" id="num1" ></td>
+            </tr>
+            <tr>
+               <td>Second Integer:</td>
+               <td><input type="text" id="num2" ></td>
+            </tr>
+            <tr>
+               <td>Third Integer:</td><br>
+               <td><input type="text" id="num3" ></td>
+           </tr>
+       </table>
+       <br>
+       <input type="button" onclick="process2()" value="SUBMIT">
+       <input type="reset" value="RESET"> 
+       <button type="button" id="fadeButton" >Click to Fade Result</button>
+       <div id="fadeout"></div>
+       <div id="theTable"></div>
+      
+   </form>
+   <a href="basic2.html">Back to main page</a><br>
+   <a href="../homepage/index.html">Back to homepage</a>
+</section>
+
+<footer>
+</footer>
+
+</body>
+
+</html>
