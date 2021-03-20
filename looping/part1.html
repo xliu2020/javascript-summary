@@ -62,7 +62,12 @@
             
             sum += x;
             product *= x;
-            x+=3;
+            if (x<=18) {
+                x+=3;
+            } else {
+                break;
+            }
+           
             input +=" + " + x;
             input1 +=" * " + x;
 
