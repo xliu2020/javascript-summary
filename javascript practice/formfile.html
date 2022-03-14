@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+
+    <title>HTML Forms</title>
+
+    <style>
+
+        form{
+            width:400px;
+
+        }
+        form > input {  
+            /* direct child selection */
+            font-family:Arial;
+            font-size: 24px;
+            font-weight:bold;
+            background-color: blanchedalmond;
+            color: indianred;
+            border-color:indianred;
+            border-style:solid;
+            border-width:1px;
+            border-radius: 6px;
+            padding:12px;
+            margin:10px;
+        }
+
+        form > label {
+            font-family:Arial;
+            font-size:20px;
+            color:indianred;-
+        }
+    </style>
+</head>
+
+<body>
+
+<form>
+
+    <textarea cols="40" rows="4"></textarea><br/>
+    <label for="firstname">First Name:</label>
+    <input type="text" id="firstname"/>
+    <br/>
+
+    <label for="email">Email:</label>
+    <input type="email"/>
+    <br/>
+
+    <label for="password">Password:</label>
+    <input type="password" id="password" />
+    <br/>
+
+    <label for="emaillist">Please send me many emails</label>
+    <input type="checkbox" id="emailist" />
+    <br/>
+
+    <!-- <input type="color"/> -->
+
+    <label for="favfood1">Pizza</label>
+    <input type="radio" name="buttons" />
+
+    <label for="favfood2">Bureger</label>
+    <input type="radio" name="buttons" />
+    
+    <label for="favfood3">Burrito</label>
+    <input type="radio" name="buttons"/>
+    <br/>
+
+    <input type="reset" />
+
+    <input type="submit"/>
+    
+</form>
+
+</body>
+</html>

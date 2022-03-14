@@ -1,0 +1,310 @@
+body {
+    background-color: lightblue;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 180px;
+    font-size: 500%;
+    color:white;
+    text-shadow:3px 1px 6px black;
+}
+
+p {
+    color:steelblue ;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h2 {
+    text-align: center;
+    margin-top: 40px;
+    color:white;
+}
+
+header { 
+    background-color:lightblue;
+    height:650px;
+    }
+   
+
+footer  {
+    text-align:center;
+}
+
+#teresa {
+    font-size:x-large;
+    font-weight: bold;
+    text-decoration: none;
+    color:white;
+}
+
+#varbox {
+   
+    width:1330px;
+    height:42px;
+  
+    
+}
+
+#varbox nav ul {
+
+    padding-right: 0px;
+    text-align:right;
+    
+}
+
+#varbox nav ul li {
+    display:inline-block;
+    padding-left: 40px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    
+}
+
+#varbox nav a {
+    text-decoration:none;
+}
+
+#varbox nav ul li a {
+    text-decoration: none;
+    color:white;
+ 
+}
+
+#container-wrapper {
+    padding-left: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+
+
+}
+
+
+
+#box{
+    width:1120px;
+    height:500px;
+    background-color: ghostwhite;
+    margin-left: auto;
+    margin-right:auto;
+    padding: 40px 70px 40px 70px;
+    line-height: 30px;
+}
+
+#words {
+    width:550px;
+    height:400px;
+    margin-top: 40px;
+    display: inline-block;
+    vertical-align: top;
+    margin-left:25px ;
+
+}
+
+#portrait {
+    width:267px;
+    height:400px;
+    display:inline-block;
+    margin-left:180px;
+    margin-top:50px;
+    border:10px dashed black;
+   
+    border-radius: 10px;
+}
+
+
+    
+
+
+.right-arrow {
+    width: 0;
+    height: 1px;
+    border-left: 10px solid #cccf;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    margin-left: 0px;
+    display:inline-block;
+    
+}
+
+#link {
+    width:235px;
+    height:21px;
+    text-align: left;
+  
+    display:inline-block
+}
+#link a {
+    text-decoration: none;
+
+    color: mediumorchid;
+    align-items: center;
+ 
+}
+
+/* #image-container {
+    width:1000px;
+    height:350px;
+    color:yellow;
+    display:inline-block;
+} */
+
+#image-box {
+    width:300px;
+    height:200px;
+    display:inline-block;
+    margin-top:50px;
+    margin-left: 80px;
+    margin-right:80px;
+    border:10px dashed black;
+    border-radius: 10px;
+}
+
+
+
+.project-image-container {
+    width:500px;
+    height:300px;
+    display:inline-block;
+    margin-top:50px;
+    margin-right:20px;
+    border:10px dashed black;
+    border-radius: 10px;
+}
+
+
+    
+
+
+#buttonone {
+    background-color: lightblue;
+    color: mediumorchid;
+    margin-left: 110px;
+    margin-top:15px;
+    font-weight: 800;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    font-size: x-large;
+    font-family: Arial, Helvetica, sans-serif;
+    border-radius: 10px;
+    display:inline-block;
+
+}
+
+     #buttontwo {
+        background-color: lightblue;
+        color: mediumorchid;
+        margin-left: 340px;
+        margin-top:15px;
+        font-weight: 800;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        font-size: x-large;
+        font-family: Arial, Helvetica, sans-serif;
+        border-radius: 10px;
+        display:inline-block;
+    
+    }
+    
+
+
+.alignleft {
+    float: left;
+    color: mediumorchid;
+    background-color: lightblue;
+    padding: 15px 32px;
+    text-align: center;
+    font-size: x-large;
+    font-family: Arial, Helvetica, sans-serif;
+    border-radius: 10px;
+    
+}
+.alignright {
+    float: right;
+    color: mediumorchid;
+    background-color: lightblue;
+    padding: 15px 32px;
+    text-align: center;
+    font-size: x-large;
+    font-family: Arial, Helvetica, sans-serif;
+    border-radius: 10px;
+}
+
+#box>p>a {
+    color:mediumorchid;
+    text-decoration: none;
+}
+
+
+
+form > input {
+    font-family: Arial;
+    font-size: 24px;
+    font-weight: bold;
+    background-color:ghostwhite;
+    color:black;
+    border-color: tomato;
+    border-style: solid;
+    border-width: 1px;
+    border-radius:6px;
+    padding:12px;
+    margin: 10px;
+    
+}
+
+form > label {
+    font-family: Arial;
+    font-size: 18px;
+    color:steelblue;
+}
+textarea {
+    resize:none; 
+    width:400px;
+    height:70px;
+    border-color: tomato;
+    border-radius:6px;
+    padding:12px;
+    margin:10px;
+
+}
+
+#contact-container {
+    width:1120px;
+    height:600px;
+    margin-left: auto;
+    margin-right:auto;
+}
+#my-contact-info-container {
+    width:400px;
+    height:300px;
+    margin-left: 50px;
+    text-align: center;
+    display: inline-block;
+    padding-top: 30px;
+    padding-bottom: 169px;
+
+}
+
+#my-contact-info-container>p {
+    margin-top: 100px;
+    line-height: 50px;
+}
+
+#form-container {
+    width:400px;
+    height:200px;
+    color:rgb(146, 197, 52);
+    border-radius:5px;
+    padding:20px;
+    margin-left: 220px;
+    margin-bottom: 700px;
+    vertical-align: top;
+    display: inline-block;
+  
+}
+
+input[type=submit] {
+    color:steelblue;
+}
