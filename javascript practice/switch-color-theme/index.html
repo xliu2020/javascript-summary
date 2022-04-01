@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+
+        const setTheme = theme => document.documentElement.className = theme;
+    </script>
+    <style>
+       
+       * {
+
+        margin:0;
+        padding:0;
+       }
+
+        :root,
+        :root.light {
+
+            --bg-color:rgb(247, 252, 181);
+            --text-color:#123;
+            --nav-color:rgb(228, 248, 43);
+            --main-font: 'Gill Sans';
+
+        }
+
+        :root.dark {
+            --bg-color:#121212;
+            --text-color:#45ADFE;
+            --nav-color:rgb(3, 87, 165);
+            --main-font: Helvetica;
+           
+        }
+
+        body {
+
+            background-color: var(--bg-color);
+            color:var(--text-color);
+            font-family: var(--main-font);
+            transition:all 0.2s ease-in;
+            
+
+        }
+
+        main {
+
+            height:500px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            
+        }
+
+
+        ul {
+            
+            display:flex;
+            flex-direction: row;
+            justify-content: space-around;
+            background-color: var(--nav-color);
+            padding:15px 0;
+        }
+
+        ul li {
+
+        list-style-type: none;
+
+        }
+
+        .theme-type {
+
+            text-align: center;
+            margin:30px 0;
+            font-size:40px;
+            text-transform: capitalize;
+            line-height: 80px;
+            transition:all 0.5s ease-in-out;
+        }
+
+        .theme-btn {
+
+            width: 150px;
+            height: fit-content;
+            padding: 0.5em;
+            border-radius: 50%;
+            cursor: pointer;
+            border: none;
+            background-color: transparent;
+            margin:0 auto;
+            transition:all 0.5s ease-in-out;
+
+            
+
+            }
+
+        .theme-btn img {
+
+            width:100%;
+            height:100%;
+            object-fit:cover;
+            transition:all 2s ease-in;
+
+        }
+
+        .theme-btn.light {
+
+            display:none;
+            
+        }
+
+        .dark .theme-btn.light {
+            display: block;
+            background-color: #fff;
+        }
+
+        .dark .theme-btn.dark {
+            display:none;
+            
+        }
+
+        .theme-btn.dark {
+
+            background-color: rgb(13, 67, 216);
+        }
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    
+    <div class="toggle-container">
+
+        <nav>
+            <ul>
+                <li>Hi</li>
+                <li>Hi</li>
+                <li>Hi</li>
+            </ul>
+        </nav>
+        <main>
+            <div class="theme-type">welcome to the world!</div>
+
+                <button class="theme-btn light" onclick="setTheme('light')" title="light mode"><img src="sun.png"  alt="sun"></button>
+                <button class="theme-btn dark" onclick = "setTheme('dark')"title="dark mode"><img src="moon.png" alt="moon"></button>
+            </div>
+
+        </main>
+       
+
+    
+</body>
+</html>
