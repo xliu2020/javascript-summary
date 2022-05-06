@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="cnit 133m mobile web homework 1 homepage">
+    <link rel="stylesheet" href="mystyle.css">
+    <title>CNIT 133M Homework 1</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('#btn').click(function(){
+                $("h1").css({color:"rgb(253, 213, 161)"});
+                $("h1").animate({
+                    fontSize:'+=50px'
+                },"1000");
+            $("h1").animate({
+                fontSize:'-=50px',
+            },"slow");
+                $('img[src="portrait1.jpg"]').css({
+                    border:"5px rgb(148, 4, 4) solid"
+                });
+            });
+           
+            
+            
+            
+
+            
+        })
+    </script>
+</head>
+<body>
+    <h1>Simple HTML & CSS</h1>
+<section>
+    
+        <img src="portrait1.jpg" width="200" height="200" alt="My Portrait">
+        <p>Hi,my name is Xiaoying Liu.Being interested in coding and design,I aim at being a front-end developer.I have learned HTML,CSS and Javascript but I know that only keep learning and up tp date my coding skills and knowledge with consistency would make me competitive in this industry.</p>
+  
+        <p >I am taking this class because I am interested in how the mobile web and applications. It must have lots of fun to develop a mobile website and want to get me ready to be a web developer in the future. </p>
+    
+    <hr>
+    <h2>Technologies for this class</h2>
+    <ul>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>Javascript</li>
+    </ul>
+    <hr>
+    <h2>Resources</h2>
+    <ul>
+        <li><a href="https://eloquentjavascript.net/" target="_blank">Eloquent JavaScript 3rd edition (2018)</a><br> <span>The content is not so much but pretty good. The whole book is divided into 3 part.First part for the basic of Javascript, second part mentions the practical use of Javascript and the third part is about Node. A valuable book that you should never miss.</span></li>
+        <li><a href="https://www.sitepoint.com/" target="_blank">SitePoint</a><br><span>SitePoint is one of the largest community-driven development hubs on the web. HTML, CSS, Javascript or mobile apps or PHP or any other things. You can always find your next development project here, including latest news, trends tips or more. </span> </li>
+ 
+    </ul>
+    <button id="btn">Start animation</button>
+</section>
+<footer></footer>
+</body>
+</html>

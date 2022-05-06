@@ -1,0 +1,73 @@
+body {
+
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+   
+}
+
+.dropdown {
+    position:relative;
+    display:inline-block;
+   clear:left
+    
+   
+}
+
+.dropdown-btn {
+    padding:12px 16px;
+    width:160px;
+    background-color: darkcyan;
+    color: cornsilk;
+}
+.dropdown-content {
+    display:none;
+    position:absolute;
+    cursor: pointer;
+    z-index:1;
+    width: 160px;
+   
+
+}
+.dropdown-content a {
+    padding:12px 16px;
+    text-decoration: none;
+    display:block;
+    color: cornsilk;
+    background-color: darkcyan;
+    width:160px
+}
+
+
+.dropdown:hover .dropdown-content{
+    display:block;
+   
+}
+
+.dropdown-btn:hover, .dropdown-content a:hover {
+    background-color: rgb(2, 88, 88);
+}
+
+#lightblue:hover{
+    color:lightblue;
+}
+
+
+
+#lightgold:hover{
+    color:rgb(252, 252, 165);
+}
+
+#lightgold:active{
+    background-image: url(../);
+}
+
+img {
+    float:left;
+    margin-right:10px;
+    
+}
+
+.content{
+    margin-top: 5px;
+    display: inline-block;
+    color:rgb(43, 161, 161)
+}

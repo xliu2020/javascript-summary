@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <title>Cnit132A - Homework 2 Working with Grids</title>
+   <meta charset="utf-8">
+   <meta name="description" content="working with grids">
+   <meta name="viewpoint" content="">
+   <style>
+       /* header {
+           height:fit-content;
+           display: inline-block;
+       } */
+       a {
+           text-decoration: none;
+           color: rgb(49, 148, 148);
+       }
+
+       footer{
+           margin: 10px 0;
+       }
+       a:hover {
+            color:rgb(24, 81, 83)
+       }
+
+       h1 {
+           display: inline;
+       }
+
+       nav {  
+            float:right;  
+       }
+
+       
+       li {
+           list-style-type: none;
+           display:inline-block;
+           padding-left:50px
+       }
+
+      .page-layout {
+         display: grid; 
+         grid-template-columns:1fr 1fr;
+         grid-template-rows:50vh 50vh; 
+        grid-template-areas:
+        "search links"
+        "messages news";
+        /* align-items: stretch; */
+        clear:both
+      }
+	  .news, .links, .search, .messages {
+	     text-align: center;
+		 font-weight: bold;
+         align-content: stretch;
+	  }
+	  .news {
+	     background-color: cyan;
+         grid-area:news;
+	  }
+	  .links {
+	     background-color: orange;
+         grid-area:links;
+	  }
+	  .search {
+	     background-color: violet;
+         grid-area: search;
+	  }
+	  .messages {
+	     background-color: red;
+         grid-area:messages;
+	  }
+
+   </style>
+</head>
+<body>
+<header>
+    <h1>CNIT132A - Working with Grids</h1>
+    <nav>
+        <ul>
+            <li><a href="../h1/page2.html">Homework 1</a></li>
+            <li><a href="hw2part1.html">Part 1</a></li>
+            <li><a href="hw2part2.html">Part 2</a></li>
+            <li><a href="fairytale.html">Part 3</a></li>
+        </ul>
+    </nav>
+</header>
+<div class="page-layout">
+  <div class="news">News</div>
+  <div class="links">Links</div>
+  <div class="search">Search</div>
+  <div class="messages">Messages</div>
+</div>
+<footer><a href="../h1/page2.html">Back to Homework 1</a></footer>
+</body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="description" content="summary of what this page is about">
+<title>CNIT 133 Homework 6 - Objects</title>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="jquery.mask.js"></script>
+<script src="jquery.mask.min.js"></script>
+
+<script>
+  $('document').ready(function() {
+    $('input[name="mobile-number"]').mask('(000)000-0000');
+// $('document').ready(function() tells the script to wait until the page is loaded enough for the browser to know about hte input fields in the document.
+});
+
+function splitNum() {
+    var telnum = document.getElementById("telnum").value;
+    
+    var split1 = telnum.substr(1,3);
+    var split2 = telnum.substr(5,3);
+    var split3 = telnum.substring(9,13);
+
+    document.getElementById("farea").innerHTML="The first 3 digits of the phone number is " + split1;
+    document.getElementById("sarea").innerHTML="The second 3 digits of the phone number is " + split2;
+    document.getElementById("tarea").innerHTML="The last 4 digits of the phone number is " + split3;
+
+}
+
+</script>
+
+<style>
+
+    form {
+        border:2px rgb(71, 114, 46) solid;
+        padding:10px;
+        background-color: rgb(248, 235, 210);
+        width: fit-content;
+    }
+
+    a {
+        text-decoration: none;
+        color:rgb(135, 180, 44);
+        display: inline-block;
+        padding: 10px;
+    }
+
+    a:hover {
+        color:teal;
+    }
+    
+    div {
+        margin:10px;
+    }
+</style>
+
+</head>
+<body>
+
+<header>
+    <h1>CNIT 133 Homework 6 - Objects - Part 3</h1>
+</header>
+
+<section>
+    <form>
+        <label for="telnum">Enter a phone number: </label>
+        <input type="text" id="telnum" name="mobile-number">
+        <input type="button" id="submit" value="Submit" onclick="splitNum()">
+        <input type="reset" value="reset">
+        <br>
+    </form>
+    <div id="farea"></div>
+    <div id="sarea"></div>
+    <div id="tarea"></div>
+
+  
+    <a href="hw6.html">Back to last page</a>
+    <a href="../hw1/index.html">Back to Homepage</a>
+</section>
+<video controls="controls" width="350" height="200">
+    <source src="How radical gardeners took back New York City.mp4" type="video/mp4">
+    <!-- add multiple <source> to specify alternative video files avaliable-->
+    the video cannot be displayed
+</video>
+<footer>
+</footer>
+
+</body>
+
+</html>

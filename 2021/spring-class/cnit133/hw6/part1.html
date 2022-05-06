@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="description" content="summary of what this page is about">
+<title>CNIT 133 Homework 6 - Objects</title>
+</head>
+<style>
+
+   form {
+        border:2px rgb(71, 114, 46) solid;
+        padding:10px;
+        background-color: rgb(248, 235, 210);
+        max-width: 700px;
+    }
+
+    a {
+        text-decoration: none;
+        color:rgb(135, 180, 44);
+        padding:10px;
+        display: inline-block;
+    }
+
+    a:hover {
+        color:teal;
+    }
+
+</style>
+<script>
+    
+    function process() {
+        
+        var  orinum = document.getElementById("orinum").value;
+        originalNum = parseFloat(orinum);
+
+        var integer, squinteger, tenths, hundredths, thousandths;
+        var splitnum = orinum.split(".");
+        var numverify = splitnum[1];
+        
+        numverify = String(numverify);
+        console.log(typeof(numverify));
+
+        if(numverify.length < 4 || orinum.indexOf(".") == -1 || isNaN(originalNum) == true) {
+
+            document.getElementById("numresult").value = "At least 4 decimal positions required for your input and must be a number. Please try again.";
+
+        } else {
+
+            integer= Math.round(originalNum);
+            squinteger= Math.round(Math.sqrt(originalNum));
+            // tenths = Math.floor(originalNum * 10 +.5) / 10;
+            tenths = originalNum.toFixed(1);
+            // hundredths = Math.floor(originalNum * 100 + .5)/ 100;
+            hundredths = originalNum.toFixed(2);
+            thousandths = originalNum.toFixed(3);
+
+            // thousandths = Math.floor(originalNum * 1000 + .5) / 1000;
+           
+            document.getElementById("numresult").value = "The original number is " + integer +"\n\nThe square root of the floating-point number that is rounded to an integer is " + squinteger + "\n\nThe number rounded to the nearest tenth " + tenths +"\n\nThe number rounded to the nearest hundredth " + hundredths +"\n\nThe number rounded to the nearest thousandths " + thousandths;
+        };
+              
+        
+        
+    }
+
+    function clearResult() {
+
+        document.getElementById("numresult").value = "";
+    }
+
+</script>
+<body>
+
+<header>
+    <h1>CNIT 133 Homework 6 - Objects - Part 1</h1>
+</header>
+
+<section>
+    
+    <form>
+        <h3>Please enter a floating-point number with at Least 4 decimal positions</h3>
+
+        <label>Enter here:</label>
+        <input type="text" id="orinum" autofocus>
+        <input type="button" value="Submit" onclick="process()"></input>
+        <input type = "reset" value="Reset" onclick = "clearResult()">
+        <br>
+        <br>
+        <textarea id="numresult" name="numresult" rows="10" cols="50" readonly></textarea>
+    </form>
+   
+    
+    <a href="hw6.html">Back to last page</a>
+    <a href="../hw1/index.html">Back to Homepage</a>
+</section>
+
+<footer>
+</footer>
+
+</body>
+
+</html>

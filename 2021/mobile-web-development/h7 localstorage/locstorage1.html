@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+function clickSession()
+{
+if(typeof(Storage)!=="undefined")
+  {
+  if (sessionStorage.clickcount)
+    {
+    sessionStorage.clickcount=Number(sessionStorage.clickcount)+1;
+    }
+  else
+    {
+    sessionStorage.clickcount=1;
+    }
+  document.getElementById("msg1").innerHTML="You have clicked the button " + sessionStorage.clickcount + " time(s) in this session.";
+  }
+else
+  {
+  document.getElementById("msg1").innerHTML="Sorry, your browser does not support local storage...";
+  }
+}
+
+
+
+function countClick()
+{
+if(typeof(Storage)!=="undefined")
+  {
+  if (localStorage.clickcount)
+    {
+    localStorage.clickcount=Number(localStorage.clickcount)+1;
+    }
+  else
+    {
+    localStorage.clickcount=1;
+    }
+  document.getElementById("msg").innerHTML="You have clicked the button " + localStorage.clickcount + " time(s).";
+  }
+else
+  {
+  document.getElementById("msg").innerHTML="Sorry, your browser does not support local storage...";
+  }
+}
+</script>
+</head>
+<body>
+<h1>Local Storage Working</h1>
+<p><button onclick="countClick()" type="button">Click me!</button></p>
+<div id="msg"></div>
+<p>Click the button to see the counter increase.</p>
+<p>Close the browser tab (or window), and then open the page again. The counter will continue and is not reset!</p>
+<h1>Session Storage Working</h1>
+<p><button onclick="clickSession()" type="button">Click me!</button></p>
+<div id="msg1"></div>
+<p>Click the button and you will see the counter increasing every time you click.</p>
+<p>Close the browser tab (or window), and try again, and you will notice that the counter is reset.</p>
+</body>
+</html>
+
+

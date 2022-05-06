@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="description" content="summary of what this page is about">
+<title>Homework 7 -- Object Model and Miscellaneous jQuery</title>
+<script src="jquery.js"></script>
+
+<script>
+    $(document).ready(function() {
+        $('.description').hide();
+        $('section h2').toggle(
+            function(){
+                $(this).next('.description').slideDown();
+                $(this).addClass('close');
+            },
+            function() {
+                $(this).next('.description').slideUp();
+                $(this).removeClass('close');
+            }
+        );
+    });
+</script>
+<style>
+    h2 {
+        background: url(down-arrow.png) no-repeat ;
+        background-position: left;
+        cursor:pointer;
+        background-size:10px 10px;
+        padding-left:15px;
+    }
+
+   .close {
+        background:url(upload.png) no-repeat;
+        background-size:10px 10px;
+        background-position: left;
+    }
+    
+    a {
+        text-decoration: none;
+        font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        color:rgb(21, 87, 145)
+    }
+
+    a:hover {
+        color:rgb(221, 82, 140);
+    }
+
+    p, h2 {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+</style>
+</head>
+<body>
+
+<header>
+    <h1>CNIT 133 Homework 7 - Object Model and Event Model</h1>
+</header>
+
+<section>
+    <h2>Part 1</h2>
+    <div class="description">
+        
+        <p>In this webpage, users are allowed to select a page layout and formatiing through the use of className property.</p>
+        <a href="part1.html">Go to Part 1</a>
+    </div>
+    <h2>Part 2</h2>
+    <div class="description">
+        <p>Display a top navigation bar containing a link to your Homework 1 and five other links that will be to the cover page for each of your Homework2 - Homework6.</p>
+        <a href="part2.html">Go to Part 2</a>
+    </div>
+    <br>
+    <a href="../hw1/index.html">Back to Homepage</a>
+</section>
+
+<footer>
+</footer>
+
+</body>
+
+</html>

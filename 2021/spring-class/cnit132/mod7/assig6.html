@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head> 
+<meta charset="utf-8">
+<meta name="description" content="working with CSS variables specificity and inheritance">
+<title>CSS Variables Assignment</title>
+<style>
+:root {--color:cyan;--fcolor:blue; --vlink:red; --blink:yellow;--logo:url('ball.png'); --image:url('ballsmall.png');}
+body { background-color: var(--color);}
+h1 { 
+  text-align:center; 
+  height: 120px;
+  background: var(--logo) no-repeat;
+ 
+  color:var(--fcolor);
+}
+a { text-decoration: none; 
+color:var(--fcolor);
+}
+li {
+  list-style-image: var(--image);
+}
+a:hover{
+  background-color:var(--blink);
+}
+a:visited {color:var(--vlink);}
+</style>
+ <body>
+<h1>ABC Volleyball League</h1>
+<h2>Created for fun and for learning volleyball</h2>
+<ul>
+  <li><a href="index.html">Home</a></li>
+  <li><a href="members.html">Our Members</a></li>
+  <li><a href="https://www.facebook.com">Facebook Page</a></li>
+</ul>
+<p>This is our league page. Hope you enjoy what our <a href="members.html">Members</a> have to offer!</p>
+</body>
+</html>

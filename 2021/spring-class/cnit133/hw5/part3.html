@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="description" content="summary of what this page is about">
+<title>CNIT 133 Homework 5 - Arrays</title>
+</head>
+<style>
+    table {
+        border: brown 2px solid;
+        margin:10px;
+        padding:10px;
+        margin-top: 20px;
+    }
+    table tr td {
+        text-align:center;
+    }
+
+    a {
+        margin:0 10px;
+        text-decoration: none;
+    }
+</style>
+<script>
+    var titleArray = ["State Abbr", "State Name", "Captical", "Population"];
+      
+
+    var stateArray=[
+            ["AL","ALABAMA","Montgomery","4887871"],
+            ["AK", "ALASKA", "Juneau","4737438"],
+            ["AZ", "ARIZONA", "Phoenix", "7171646"],
+            ["AR","ARKANSAS","Little Rock","3010825"],
+            ["CA","CALIFORNIA","Sacramento","39557045"],
+            ["CO","COLORADO","Denver","5694564"]
+        ];
+       
+
+    var allStatesArray = [
+            ["CT","Connecticut"], ["DE","Delaware"],
+            ["FL","FLorida"],["GA","Georgia"],
+            ["HI","Hawaii"],["ID","Idaho"],
+            ["IL","Illinois"],["IN","Indiana"],
+            ["IA","Lowa"],["KS","Kansas"],
+            ["KY","Kentucky"],["LA","Louisiana"],
+            ["ME","Maine"],["MD","Maryland"],
+            ["MA","Massachusetts"],["MI","Michigan"],
+            ["MN","Minnesota"],["MS","Mississippi"],
+            ["MO","Missouri"],["MT","Montana"],
+            ["NE","Nebraska"],["NV","Nevada"],
+            ["NH","New Hampshire"],["NJ","New Jersey"],
+            ["NM","New Mexico"],["NY","New York"],
+            ["North Carolina","NC"],["ND","North Dakota"],
+            ["OH","Ohio"],["OK","Oklahoma"],["OR","Oregon"],
+            ["PA","Pennsylvania"],["RI","Rhode Island"],
+            ["SC","South Carolina"],["SD","South Dakota"],
+            ["TN","Tennessee"],["TX","Texas"],["UT","Utah"],
+            ["VT","Vermont"],["VA","Virginia"],
+            ["WA","Washington"],["WV","West Virginia"],
+            ["WI","Wisconsin"],["WY","Wyoming"]
+        ];
+
+      
+    function process() {
+
+        var stateName = document.getElementById("stateName").value;
+        stateName = stateName.toUpperCase();
+
+        var answer = document.getElementById("respond");
+        var output = document.getElementById("output");
+
+        output.innerHTML="";
+        answer.innerHTML= "";
+        
+        var found = false;
+        
+        for (var row = 0; row < stateArray.length; row++) {
+
+                    if((stateName == stateArray[row][0]) || (stateName == stateArray[row][1])) {
+                       
+                        answer.innerHTML ="Thanks for your inquiry, here is the information you requested:";
+
+                        for(var column = 0; column < titleArray.length; column++) {
+
+                            output.innerHTML += titleArray[column] + " = " + stateArray[row][column]+"<br>";
+                            found = true;
+                        }
+
+                        row = stateArray.length;
+                    } else {
+
+                        for (var line = 0; line < allStatesArray.length; line++) {                
+                 
+                            if ((stateName == allStatesArray[line][0]) || (stateName == allStatesArray[line][1])){
+                                                                  
+                                 answer.innerHTML="This state is not a part of the list. Please retype again";    
+                                 found = true;
+                                 line=allStatesArray.length; 
+                                 
+                            } 
+
+                         
+
+                        }
+
+                    }
+        }              
+
+        if (found == false) {
+
+            // for (var line = 0; line < allStatesArray.length; line++) {                
+                 
+            //     if ((stateName == allStatesArray[line][0]) || (stateName == allStatesArray[line][1])){
+                                                                 
+            //         answer.innerHTML="This state is not a part of the list. Please retype again";     
+                    
+
+            //         } else {
+                                    
+                         answer.innerHTML="Please make sure this is a correct state";
+                         stateName = "";
+
+                        // };
+
+                        // line=allStatesArray.length;  
+                 
+            }                           
+        // }   
+     
+ 
+    };
+
+    function resultclear() {
+        document.getElementById("respond").innerHTML="";
+        document.getElementById("output").innerHTML="";
+        
+    };
+
+</script>
+<body>
+
+<header>
+    <h1>CNIT 133 Homework 5 - Arrays - Part 3</h1>
+</header>
+
+<section>
+    <p>Enter the state name and you will know the abbreviation, captial and population of the state </p>
+    <form>
+
+        <div>
+            <label>The Name of the State:</label>
+            <input type="text" id="stateName" autofocus="autofocus">
+            <input type="button" value="Submit" onclick="process()">
+            <input type="reset" value="Reset" onclick = "resultclear()"><br>
+        </div>   
+
+        <table name="statetable">
+            <tr>
+                <th>State Abbr</th>
+                <th>State Name</th>
+                <th>Capital</th>
+                <th>Population</th>
+            </tr>
+            <tr>
+                <td>AL</td>
+                <td>Alabama</td>
+                <td>Montgomery</td>
+                <td>4887871</td>
+            </tr>
+            <tr>
+                <td>AK</td>
+                <td>Alaska</td>
+                <td>Juneau</td>
+                <td>4737438</td>
+            </tr>
+            <tr>
+                <td>AZ</td>
+                <td>Arizona</td>
+                <td>Phoenix</td>
+                <td>7171646</td>
+            </tr>
+            <tr>
+                <td>AR</td>
+                <td>Arkansas</td>
+                <td>Little Rock</td>
+                <td>3010825</td>
+            </tr>
+            <tr>
+                <td>CA</td>
+                <td>California</td>
+                <td>Sacramento</td>
+                <td>39557045</td>
+            </tr>
+            <tr>
+                <td>CO</td>
+                <td>Colorado</td>
+                <td>Denver</td>
+                <td>5694564</td>
+            </tr>
+        </table><br>
+
+        <div id="respond"></div>
+        
+        <div id="output"></div>
+
+    </form>
+    <br>
+</section>
+
+<footer>
+  
+    <a href="hw5.html">Back to Mainpage</a>
+</footer>
+
+</body>
+
+</html>

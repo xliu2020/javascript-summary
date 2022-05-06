@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<body lang="en">
+ <head>
+    <title>jQuery in CNIT 133M</title>
+    <meta charset="utf-8">
+    <meta name="description" content="Homework 1A CNIT 133M at CCSF">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <style>
+        h1 { text-align:center; color: blue; font-style:italic; margin-bottom:20px; }
+        img {float: left; margin-right:15px; }
+        .clearfloat { clear: both; }
+        button { background-color: cyan; color: blue; font-weight: bold; font-size: 0.8rem; }
+     </style>
+  </head>
+  <body>
+  <h1>Preparing CNIT 133I - JavaScript for IoT &amp; XR</h1>
+  <button id="animation">Start Animation</button>
+  <p><img src="IMG_2702.jpg" alt="connecting breadboard with LED to Arduino board">Teaching JavaScript for IoT and XR will be so much fun!</p>
+  <p class="clearfloat">I am preparing this class to be taught in Spring 2022!</p>
+  <script>
+      $(document).ready(function () {
+        $("#animation").on("click", function() {
+            var heading1 = $("h1");
+            var originalColor = heading1.css("color");
+            var originalFSize = heading1.css("font-size");
+            heading1.animate({ fontSize: '3em' }, 3000);
+            heading1.css("color", "red");
+            heading1.animate({ fontSize: originalFSize }, 3000);
+            $("img").css("border", "4px dashed red");
+            setTimeout(function() {
+                heading1.css("color", originalColor);
+            }, 2000);
+        });
+      });
+  </script>
+  </body>
+</html>

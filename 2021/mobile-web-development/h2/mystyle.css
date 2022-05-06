@@ -1,0 +1,53 @@
+/* use unified fot family */
+
+
+
+h2,h1 {
+    text-align:center;
+    color:var(--main-font-color);
+}
+
+img {
+    float: left;
+    margin:0 10px 10px 0;
+    
+}
+
+
+
+a {
+    text-decoration: none;
+    font-family: 'Courier New', Courier, monospace;
+    font-size:larger;
+    color:rgb(252, 249, 249);
+   
+}
+
+a:hover {
+    color:rgb(139, 27, 143)
+}
+
+body {
+    background-color: rgb(248, 176, 82);
+    font-family: Courier, monospace;
+    --main-font-color:rgb(88, 21, 21);
+}
+
+/* p {
+    line-height: 1.5em;
+    
+} */
+
+p:nth-child(3) {
+    clear:left;
+}
+li {
+    list-style-type:circle;
+
+}
+
+span {
+    line-height: 20px;
+    margin:10px 0 15px;
+    display:block
+}

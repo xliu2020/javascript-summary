@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="mystyle.css">
+  <link rel="manifest" href="manifest.json">
+  <script src="app.js"></script>
+  
+  
+  <title>Main Characteristics of PWA</title>
+  
+  <script>
+    function change_to_lb () {
+
+      document.body.style.backgroundImage = "url(lightblue.jpg)";
+
+    }
+    function change_to_lg () {
+
+    document.body.style.backgroundImage = "url(lightgold.jpg)";
+
+}
+  </script>
+  
+  
+</head>
+<body>
+  <h1>Main Characteristics of a PWA</h1>
+  <p>PWA(Progressive Web Application) is a methodolgy to make powerful web applications with the combination of different technologies. It has three main characteristics: reliable,fast and engaging.</p>
+  <h3>3 Main Characteristics of PWA</h3>
+  <img src="browse-192x192.png"srcset="browse-512x512.png 2x,browse-192x192.png 1x">
+  <div class="content"><p>Reliable - the PWA will load instantly when the app is launched regardless of the network state.</p>
+    <p>Fast - PWA is fast with no slow-to-respond interfaces even when the application is loaded. </p>
+    <p>Engaging - user can install PWAs which will live on the user's home screen without the need of any type of app store.</p></div>
+  
+  
+  <div class="dropdown">
+    <div class="dropdown-btn">Select Your Background</div>
+    <div class="dropdown-content">
+      <a href="#" id="lightblue" onclick="change_to_lb()">Light Blue</a>
+      <a href="#" id="lightgold" onclick="change_to_lg()">Light Gold</a>
+    </div>
+  </div>
+</body>
+
+</html>

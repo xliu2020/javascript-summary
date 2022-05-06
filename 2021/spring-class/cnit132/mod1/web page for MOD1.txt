@@ -1,0 +1,13 @@
+page 2.html: this web page locates inside the pages folder while relative.html locates inside the cnit132 folder, which means the root folder of page2.html  and the root folder of relative.html is not the same one. 
+Resolution: 
+change 
+<p><a href="page2.html">Page 2</a></p> 
+to 
+<p><a href="pages/page2.html">Page 2</a></p>
+
+page3.html: folder name for html is case-sensitive. PAGE3.html is not the same web page as page3.html.
+Resolution:
+Change 
+<p><a href=“PAGE3.html">Page 3</a></p>
+To
+<p><a href=“page3.html">Page 3</a></p>

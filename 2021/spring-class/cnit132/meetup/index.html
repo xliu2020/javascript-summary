@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Meetup Report</title>
+  <meta name="description" content="Meetup Report">
+  <meta name="Xiaoying Liu" content="SitePoint">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;300;400;600;700&display=swap" rel="stylesheet">
+<link rel="shortcut icon" type="image/png" href="../final project/favi.png">
+  <style>
+      * {
+          /* margin:0;
+          padding:0; */
+          font-family: 'Source Sans Pro', sans-serif; 
+         
+      }
+
+      header {
+        display:flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        max-width:700px;
+        height:200px;
+        margin:auto;
+        
+      }
+
+      header video{
+        position:absolute;
+        top:0;
+        left:0;
+       width:100%;
+       height:100%;
+        object-fit: cover;
+        
+        
+      }
+
+     
+
+    h1 {
+        position:relative;
+        z-index: 10;
+        color:ivory;
+    }
+
+    h3 {
+        color:rgb(19, 75, 110)
+    }
+    .overlay {
+        position:absolute;
+        top:0;
+        left:0;
+        width:100%;
+        height:100%;
+        /* object-fit: cover;
+        z-index:0; */
+        background:rgba(0,0,0, 0.7);
+
+    }
+
+    section {
+        max-width: 700px;
+        margin:auto;
+        
+    }
+
+    a {
+        background-color: rgb(142, 202, 223);
+        color:white;
+        padding:10px 15px;
+        text-decoration: none;
+        border-radius: 10px;
+        margin-left: 10px;
+       
+        transition:0.2s;
+        display:inline-block 
+        /* must add if you have animation */
+    }
+
+    a:hover {
+        transform:translateX(15px);
+    }
+
+    footer p {
+        text-align: center;
+        font-size: 14px;
+        display:block;
+        margin:auto
+    }
+
+  </style>
+
+</head>
+
+<body>
+   <header>
+       <h1>MEETUP REPORT</h1>  
+       <video src="coding.mp4" muted loop autoplay></video>
+       <div class="overlay"></div>
+   </header> 
+  <section>
+        <h2>Traversy Media</h2>
+        <p>Traversy Media features the online web development and programming tutorials for all of the latest web technologies including Node.js, Angular 2, React.js, PHP, Rails,HTML, CSS and much more.</p>
+        <p>Traversy Media uploads videos frequently around once a week and the speaker is <b>Brad Traversy</b>. The contents cover a wide range of web technologies as well as some hands-on playful projects. It absolutely deserves a watch.</p>
+        <p>I have walked through a bunch of its videos and I can always find something new in each of them. Here, I want to introduce two videos I have finished up already.</p>
+
+        <h3>First Tutorial -- A Practical Guide For Web Development In 2021</h3>
+        <img src="web-dev-2021.png" width="700" height="400" alt="web development tutorial">
+        <p>This is a practical guide for completely beginners to introduce the roadmap for web developers in 2021 that includes the different technologies to choose from as well as some new trends and some guidance. </p>
+        <p>First of all, it gives us some insigh into available paths, which are:</p>
+        <ul>
+            <li>Frontend Developers</li>
+            <li>Backend Developers</li>
+            <li>Full Stack Developers</li>
+        </ul>
+        <p>Then figure out your career goal. Bard introduced various kinds of tools, covering tools with the most popular trend. According to the path and the goal you choose, pick up the tools that you are in need or are interested in.  </p>
+        <p>Interested in it? Please visit the <a href="https://www.youtube.com/watch?v=VfGW0Qiy2I0&t=15s" target="_blank" >Website</a></p>
+        <h3>Second Tutorial -- Create a Website with Video Background</h3>
+        <img src="website-with-video-background.png" width="700" height="400" alt="create a webpage with video background">
+        <p>This is a mini project to teach you how to create a beautiful, custom landing page for a Travel website using HTML, CSS and a little Javascript, including embedding the video, customizing the menu and the animation with CSS.</p>
+        <p>This hands-on tutorial gives me a clear sample on creating a website with a decorated video background and I realize that it is not that hard than I imagined to create a website which follows up the current trend.</p>
+        <p>Interested in it? Please visit the <a href="https://www.youtube.com/watch?v=8MgpE2DTTKA" target="_blank" >Website</a></p>
+        <a style="margin-left:0px" href="../final project/homework1.html">Back to Homepage</a>
+</section>
+<footer>
+    <p>Copyright © 2021 Xiaoying Liu</p>
+</footer>
+</body>
+</html>

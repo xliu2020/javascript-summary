@@ -1,0 +1,56 @@
+$width-base: 100%
+$bgcolor: #eecccc
+$fcolor: #2f2828
+
+@function calculate-rem($size) 
+    $rem-size:$size/16px
+    @return #{$rem-size}rem
+
+
+@for $counter from 1 through 3
+    .col#{$counter}
+        float:left
+    @if $counter==1||3
+        background-color:$fcolor
+        color:$bgcolor
+    @else 
+        background-color：$bgcolor
+        color:$fcolor
+        
+
+.wapper,.nav,.header,.footer
+    width:$width-base
+
+.wrapper
+    background-color:$bgcolor
+    font-size:calculate-rem(19.2px)
+
+.header       
+    h1
+        font-size:calculate-rem(40px)
+        color:$fcolor
+
+.nav
+    background-color:#fbf4f4
+    font-size:calculate-rem(16px)
+    padding:calculate-rem(3.2px)
+    ul li
+        display:inline-block
+        width:10rem
+        margin-right:calculate-rem(3.2px)
+        border-radius:calculate-rem(80px)
+        border:calculate-rem(16px) solid transparent
+        color:$fcolor
+
+.col1
+    width:50%
+
+.col2
+    width:25%
+
+.col3
+    width:25%
+
+.footer
+    background-color:$bgcolor
+    font-size:calculate-rem(14.4px)

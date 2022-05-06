@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="description" content="summary of what this page is about">
+<title>CNIT 133 Homework 5 - Arrays</title>
+<script>
+    function gotoNewPage(newform) {
+       var newWebsite= newform.weblist.options[newform.weblist.selectedIndex].value;
+       window.location=newWebsite;
+    }
+</script>
+<style>
+    section, footer {
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        margin-left:10px;
+    }
+    select, input {
+        margin:10px;
+        padding:5px;
+        border-radius: 10px;
+        border-color: rgb(60, 128, 88);
+        font-family: 'Courier New', Courier, monospace;
+        font-size: large;
+    }
+
+    input {
+        font-size: medium;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+
+   a {
+       text-decoration: none;
+       margin-right:10px;
+   }
+</style>
+</head>
+<body>
+
+<header>
+    <h1>CNIT 133 Homework 5 - Arrays - Part 2</h1>
+</header>
+
+<section>
+    <form id="form1">
+        <label> Choose one that you are interested, I have a website recommend for you:</label><br>
+        <select name="weblist" onchange="gotoNewPage(this.form)">
+            <option value="">--Choose One--</option>
+            <option value="https://www.dogearedbooks.com/">Bookstore</option>
+            <option value="https://www.redlobster.com/">Restaurant</option>
+            <option value="https://www.calacademy.org/">Museum</option>
+        </select>
+    </form>
+
+    <br>
+
+    <form id="form2">
+        <label>Choose one that you are interested, I have a website recommend for you:</label><br>
+        <select name="weblist" >
+            <option value="">--Choose One--</option>
+            <option value="https://www.dogearedbooks.com/">Bookstore</option>
+            <option value="https://www.redlobster.com/">Restaurant</option>
+            <option value="https://www.calacademy.org/">Museum</option>
+        </select>
+        <input type="button" value="Go to the page" onclick="gotoNewPage(this.form)">
+    </form>
+    <br>
+</section>
+
+<footer>
+   
+    <a href="hw5.html">Back to Mainpage</a>
+</footer>
+
+</body>
+
+</html>

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+  <meta charset="UTF-8" />
+
+  <title>ABC Toys - Location</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+<script>
+
+
+  //coded for google map
+  var x=document.getElementById("loc-result")
+  if('geolocation' in navigator) {
+    get_location();
+  } else {
+
+    x.innerHTML=GeolocationPositionError;
+  }
+
+  function get_location() {
+    navigator.geolocation.watchPosition(successCallback, errorCallback);
+  }
+
+  function successCallback(position) {
+   
+    // var latlon=position.coords.latitude+","+position.coords.longitude;
+  //   var img_url="http://maps.googleapis.com/maps/api/staticmap?center="
+  // +latlon+"&zoom=14&size=400x300&sensor=false&key=yourkey";
+  var latitude=position.coords.latitude;
+  var longitude=position.coords.longitude;
+    document.getElementById("loc-result").innerHTML="<p>Latitude: "+latitude+", Longtitude: "+longitude+"</p>"
+  }
+
+  function errorCallback(error){
+    x.innerHTML="Fail to get the current location"
+  }
+
+//   var map= L.map('map').fitWorld();
+
+// L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
+//   attribution:'Map data &copy;<a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+//   maxZoom:18,
+//   tileSize:512,
+//   zoomOffset:-1
+// }).addTo(map);
+
+// map.locate({setView:true, maxZoom:16});
+
+// var popup = L.popup();
+// var latlon=position.coords.latitude+","+position.coords.longitude;
+// marker.bindPopup(latlon)
+
+</script>
+<style>
+
+  
+    header {
+    background-color: rgb(250, 143, 143);
+    color:rgb(39, 27, 27);
+    padding:0.5rem;
+    margin:0;
+
+  }
+
+  h1,h3 {
+    margin:0;
+    padding:0 .5rem;
+  }
+  
+  nav div{
+    margin:10px 0;
+  }
+  
+  
+
+  body {
+    min-width: 360px;
+    
+  }
+
+  .fa-bars {
+  color:white;
+}
+
+  
+  nav a {
+
+  color:white
+  }
+
+  a:hover {
+    color:rgb(250, 143, 143);
+    text-decoration: none;
+  }
+
+ 
+
+  @media (min-width:768px) {
+
+   body{
+     width:800px;
+     margin:0 auto;
+   }
+    
+  }
+</style>
+</head>
+<body>
+ 
+
+
+  <nav class="navbar navbar-expand-lg bg-dark sticky-top">
+
+    <a class="navbar-brand" href="index.html">ABC Toys</a>
+  
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#menulist">
+    
+      <i class="fa fa-bars" aria-hidden="true"></i>
+    </button>
+  
+      <div class="collapse navbar-collapse justify-content-end" id="menulist">
+        <ul class="navbar-nav">
+          <li class="btn btn-dark nav-item mr-auto pl-0" ><a class="nav-link" href="index.html">Home</a></li>
+          <li class="btn btn-dark nav-item mr-auto pl-0" ><a class="nav-link" href="products.html">Products</a></li>
+          <li class="btn btn-dark nav-item mr-auto pl-0" ><a class="nav-link" href="contact.html">Contact Us</a></li>
+          <li class="btn btn-dark nav-item mr-auto pl-0" ><a class="nav-link" href="location.html ">Location</a></li>
+          <li class="btn btn-dark nav-item mr-auto pl-0" ><a class="nav-link" href="extra.html">Extra</a></li>
+        </ul>
+      </div>
+  </nav>
+
+<section class="container">
+  <br>
+ 
+  <h3>Location</h3>
+  <br>
+  <button class="btn btn-secondary ml-2" onclick="get_location()">Click here to see where you are</button>
+  <div id="loc-result" class="mt-2 ml-2"></div>
+  
+</section>
+    
+ 
+
+
+</body>
+
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="description" content="summary of what this page is about">
+<title>Homework 3</title>
+
+<link rel="stylesheet" href="hw3.css">
+<script>
+     var num1, num2;
+
+    num1 = Math.floor(Math.random() * 10);
+    num2 = Math.floor(Math.random() * 10);
+
+    
+
+    function randomQuestion() {
+        document.getElementById("question").innerHTML="How much is " + num1 + " times " +num2 + "?";
+    };
+
+    function process() {
+
+        var htmlOutput="";
+
+        var result = document.getElementById("answer").value;
+        var result1 = parseInt(result);
+
+        if (result1 == num1 * num2) {
+           
+            document.getElementById("answer").value="";
+            htmlOutput += "<p style='margin-left:10px;'>Very good!</p>";
+            document.getElementById("check").innerHTML=htmlOutput;
+            // result = "";
+           
+            setTimeout(generateQues, 1000);
+           
+
+        } else {
+
+            htmlOutput += "<p style='margin-left:10px;'>No. Please try again.</p>";
+            document.getElementById("check").innerHTML=htmlOutput;
+            document.getElementById("answer").value = "";
+        }
+    };
+
+    function generateQues() {
+       
+        var nextQues= window.confirm("Continue to answer next question?");
+      
+
+                if (nextQues = true) {
+                    document.getElementById("question").innerHTML = "";
+                    // question = "How much is " + num1 + " times " +num2 + "?";
+                    num1 = Math.floor(Math.random() * 10);
+                    num2 = Math.floor(Math.random() * 10);
+                    randomQuestion();
+                    document.getElementById("check").innerHTML="";
+                } else {
+                    return;
+                };
+ 
+    };
+
+</script>
+</head>
+<body onload="randomQuestion()">
+
+<header>
+    <h1>Part 4: Multiplication Education</h1>
+</header>
+
+<section>
+
+ <div id="question" style="margin-left:10px;margin-bottom: 20px; font-size:larger"> 
+    
+ </div>
+ 
+ <label for="answer">Your answer is: </label>
+ <input type="number" id="answer" name="answer">
+ <input type="button" style="margin-left:10px " onclick="process()" value="Submit">
+
+ <div id="check"></div>
+ <a href="index.html">Back to the main page</a>
+<footer>
+</footer>
+
+</body>
+
+</html>

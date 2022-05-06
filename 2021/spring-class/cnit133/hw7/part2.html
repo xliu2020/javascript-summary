@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="description" content="summary of what this page is about">
+<title>Homework 7 -- Object Model and Miscellaneous jQuery</title>
+<!-- <script src="http://code.jquery.com/jquery-1.7.1.js"></script> -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script>
+    $(document).ready(function() {
+       
+        $('.navigation li').hover(
+            function () {
+                $('ul', this).fadeIn();
+            },
+            function() {
+                $('ul', this).fadeOut();
+            }
+        )
+    });
+</script>
+<style>
+    h2 {
+        background: url(down-arrow.png) no-repeat ;
+        background-position: left;
+        cursor:pointer;
+        background-size:10px 10px;
+        padding-left:15px;
+    }
+
+   .close {
+        background:url(upload.png) no-repeat;
+        background-size:10px 10px;
+        background-position: left;
+    }
+    
+    a {
+        text-decoration: none;
+        font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        color:rgb(21, 87, 145)
+    }
+
+    a:hover {
+        color:rgb(221, 82, 140);
+    }
+
+    p, h2 {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .navigation {
+        margin:0;
+        padding:0;
+        list-style:none;
+    }
+
+    .navigation li {
+        float: left; /* show list items inline */
+        width:150px;
+        position:relative;
+    }
+
+    .navigation li a {
+        background:rgb(179, 211, 240);
+        display: block;
+        padding:8px;
+        text-decoration: none;
+        border-top:1px solid red;
+        text-align:center;
+    }
+
+    .navigation ul {
+        position:absolute;
+        left:0;
+        display:none;
+        margin:0 0 0 -1px;
+        padding:0;
+        list-style: none;
+        border-bottom: 3px solid yellow;
+    }
+
+    .navigation ul li {
+        width:150px;
+        float:left;
+        border-top:none;
+    }
+
+    .navigation ul a {
+        display:block; /*make sure a element covers whole li area*/
+        height:15px;
+        padding-top:10px;
+        border-top:none;
+
+    }
+
+    footer a {
+        margin-top: 15px;
+        display:block;
+    }
+   
+</style>
+</head>
+<body>
+
+<header>
+    <h1>CNIT 133 Homework 7 - Part 2 Navigation Bar</h1>
+</header>
+
+<section>
+    <ul class="navigation">
+        <li><a href="../hw1/index.html">Homepage</a></li>
+        <li><a href="../hw2/hw2.html">Homework 2</a>
+            <ul>
+                <li><a href="../hw2/part1.html">Part 1</a></li>
+                <li><a href="../hw2/part2.html">Part 2</a></li>
+                <li><a href="../hw2/part3.html">Part 3</a></li>
+            </ul>
+            <div class="clear"></div>
+        </li>
+
+        <li><a href="../hw3/index.html">Homework 3</a>
+            <ul>
+                <li><a href="../hw3/part1.html">Part 1</a></li>
+                <li><a href="../hw3/part2.html">Part 2</a></li>
+                <li><a href="../hw3/part3.html">Part 3</a></li>
+                <li><a href="../hw3/part4.html">Part 4</a></li>
+            </ul>
+            <div class="clear"></div>
+        </li>
+
+        <li><a href="../hw4/hw4.html">Homework 4</a>
+            <ul>
+                <li><a href="../hw4/part1.html">Part 1</a></li>
+                <li><a href="../hw4/part2.html">Part 2</a></li>
+                <li><a href="../hw4/extra credit.html">Extra Credit</a></li>
+            </ul>
+            <div class="clear"></div>
+        </li>
+
+        <li><a href="../hw5/hw5.html">Homework 5</a>
+            <ul>
+                <li><a href="../hw5/part1.html">Part 1</a></li>
+                <li><a href="../hw5/part2.html">Part 2</a></li>
+                <li><a href="../hw5/part3.html">Part 3</a></li>
+            </ul>
+            <div class="clear"></div>
+        </li>
+
+        <li><a href="../hw6/hw6.html">Homework 6</a>
+            <ul>
+                <li><a href="../hw6/part1.html">Part 1</a></li>
+                <li><a href="../hw6/part2.html">Part 2</a></li>
+                <li><a href="../hw6/part3.html">Part 3</a></li>
+            </ul>
+            <div class="clear"></div>
+        </li>
+    </ul>
+
+</section>
+<br>
+<footer>
+    <br><a href="hw7.html">Back to Last Page</a>
+</footer>
+
+</body>
+
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="description" content="Homework 4 for looping statements">
+<title>Homework 4 - Part 1</title>
+
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="/resources/demos/style.css">
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script>
+      $(function() {
+          $("#draggable").draggable();
+      });
+  </script>
+    <style>
+        h1 {
+            text-align: center;
+        }
+        #draggable {
+        
+            background-color: rgb(178, 204, 95);
+            text-align: center;
+            padding:40px 0;
+            width:150px;
+            margin-top:20px;
+            
+        }
+
+        #container {
+            margin: 0 auto;
+            background-color: rgb(213, 226, 169);
+            width:400px;
+            padding:20px;
+            
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>CNIT 133 Homework 4 - Looping Statements - Part 1</h1>
+</header>
+
+<section>
+    <script>
+        var sum=0, product=1;
+
+        for(var x=5; x<=21; x+=4) {
+            sum += x;
+            product *= x;
+        }
+
+        document.writeln("<div id='container'><p>The result of 5 + 9 + 13 + 17 + 21 is " + sum +"<br> </p>");
+        document.writeln("<p>The result of 5 * 9 * 13 * 17 * 21 is " + product + "</p>");
+    </script>
+    <script>
+        var x=3, sum=0, product=1, input= " <p>The result of 3" ,input1=input;
+
+        while( x<=21) {
+            
+           
+            sum += x;
+            product *= x;
+            if (x<=18) {
+             x+=3;
+             } else {
+                 break;
+             }
+           
+            input +=" + " + x;
+            input1 +=" * " + x;
+
+        }
+        document.writeln( input + " is " + sum +" </p>");
+        document.writeln( input1 + " is " + product +" </p>");
+    </script>
+    
+   
+    <a href="../hw4/hw4.html">Back to Homework 4</a><br>
+
+    <div id="draggable">
+        <p>drag me</p>
+    </div>
+</div>
+</section>
+
+<footer>
+</footer>
+
+</body>
+
+</html>

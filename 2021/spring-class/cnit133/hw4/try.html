@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head> 
+<meta charset="utf-8">
+<meta name="description" content="exercise using switch, jQuery, and external .js file">
+<title>Example: switch</title>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+<style>
+body {background-color: #f5f5dc;}
+.body { width: 600px; margin: 0px auto;}
+</style>
+
+</head>
+<body>
+
+<section class="body">
+
+<h2>Looping and Switch - Write on Same Page</h2>
+
+<form name="myform">
+
+<div id ="errOut"></div><br>
+
+Select a physical tag type:
+           1 for strong, 2 for emphasize, 3 for underlined: 
+<input type="text" id="input" size="4"><br><br>
+
+Select 1 to 10 lines to write: 
+<input type="text" id="lines" size="4"><br><br>
+
+
+<input type="button" id="proc" value="SUBMIT">
+
+
+<input type="reset" value="RESET" id="res"><br><br>
+
+
+</form>
+
+<div id ="listOut"></div> 
+</section>
+
+<script src="loop3.js"></script> <!-- external script file being inserted here -->
+
+</body>
+</html>

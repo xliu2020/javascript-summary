@@ -1,0 +1,25 @@
+{
+    "name": "My Characteristics Of PWA",
+    "short_name": "My PWA",
+    "start_url": "index.html",
+    "display": "standalone",
+    "background_color": "#fdfdfd",
+    "theme_color": "#db4938",
+    "orientation": "portrait-primary",
+    "icons": [
+      
+      {
+        "src": "browse-192x192.png",
+        "type": "image/png", "sizes": "192x192"
+      },
+      {
+        "src": "browse-384x384.png",
+        "type": "image/png", "sizes": "384x384"
+      },
+      {
+        "src": "browse-512x512.png",
+        "type": "image/png", "sizes": "512x512"
+      }
+    ]
+  }
+  

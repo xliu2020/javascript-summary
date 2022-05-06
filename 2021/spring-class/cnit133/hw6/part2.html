@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="description" content="summary of what this page is about">
+<title>CNIT 133 Homework 6 - Objects</title>
+
+<style>
+    textarea {
+        vertical-align: middle;
+        /* align the textarea on the label  */
+    }
+
+    form {
+        border:2px rgb(71, 114, 46) solid;
+        padding:20px;
+        background-color: rgb(248, 235, 210);
+        max-width: 600px;
+    }
+
+    a {
+        text-decoration: none;
+        color:rgb(135, 180, 44);
+        display: inline-block;
+        padding: 10px;
+    }
+
+    a:hover {
+        color:teal;
+    }
+
+</style>
+<script>
+    function numSearch() {
+
+        var keyText = document.getElementById("keyText").value.toLowerCase();
+        var count = 0;
+        var key = document.getElementById("key").value.toLowerCase();
+        var outputtext = "";
+
+        for(var i = 0; i < keyText.length; i++) {
+            
+            if (keyText.charAt(i) == key) {
+                
+                count++;
+            } 
+           
+        };
+
+        if (count == 0 ) {
+            var newWindow = window.open("", "new_window", "top=1,left=1,width=300,height=100");
+            outputtext = "Search character not found in text string!";
+            
+            newWindow.focus();
+            newWindow.document.write(outputtext);
+            newWindow.document.close();
+            document.getElementById("key").value = "";
+            document.getElementById("output").value = "";
+            document.getElementById("keyText").value = "";
+
+        } else {
+            console.log(count);
+            document.getElementById("output").value = count;
+            
+        }
+
+
+
+        
+    }
+</script>
+</head>
+
+
+<body onload="document.getElementById('keyText').focus();">
+
+<header>
+    <h1>CNIT 133 Homework 6 - Objects - Part 2</h1>
+</header>
+
+<section>
+    <form name="myform" >
+       
+            <label for="keyText"> Input the text for search: </label>
+            <textarea id="keyText" name="keyText" cols="20" rows="1"></textarea><br><br>
+        
+        <label>Input the character to search for: </label>
+        <input type="text" name="key" id="key">
+        <input type="button" value="Submit" onclick="numSearch()">
+        <input type="reset" value="Reset" id="clear"><br><br>
+
+        <label>The numbers of occurences of the search character is: </label>
+        <input type="text" id="output" size="4" readonly>
+    </form>
+    
+    <a href="hw6.html">Back to last page</a>
+    <a href="../hw1/index.html">Back to Homepage</a>
+</section>
+
+<footer>
+</footer>
+
+</body>
+
+</html>

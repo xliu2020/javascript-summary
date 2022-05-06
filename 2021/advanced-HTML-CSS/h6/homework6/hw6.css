@@ -1,0 +1,76 @@
+
+
+* { background-color:#C0DEED;}
+
+h1 {
+    text-align: center;
+    position:relative;
+    z-index: 200;
+    background-color: transparent;
+    
+    
+    
+}
+
+a {
+    z-index: 180;
+}
+@keyframes moving {
+    0%{left:0; }
+    25%{transform:rotate(35deg)scale(2)}
+    50% {left: calc(100% - 208.83px);transform:rotate(-45deg)scale(0.7)}
+    100% {left:calc(50% - 208.83px/2);transform:rotate(0)scale(1)}
+
+     
+    }
+#banner{
+    background-color: rgb(100, 165, 240);
+    width:fit-content;
+    height:fit-content;
+    -webkit-animation: moving 10s ease-in;
+    animation: moving 10s linear forwards;
+    position:absolute;
+    z-index: 20;
+
+
+}
+
+
+#sky {
+position:fixed;
+top:0px;left:0px;
+width:6741px;
+height:475px;
+text-align:center;
+margin:0px;
+padding:0px;
+background-color:#C0DEED;
+background: url(clouds.png) center top repeat-x;
+
+padding-bottom:10px;
+z-index:0;
+animation:animatedBg 10s linear infinite;
+}
+
+img[src="plane.png"] {
+   
+    position:relative;
+    display:block;
+    margin-left:auto;
+    margin-right:auto;
+    margin-top:300px;
+    z-index: 40;
+    
+
+}
+
+
+
+@keyframes animatedBg {
+    from{left:0}
+    to {left:-2247px}
+}
+
+#link {
+    z-index: 180;
+}

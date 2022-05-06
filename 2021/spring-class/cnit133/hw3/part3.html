@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="description" content="summary of what this page is about">
+<title>Homework 3</title>
+<link rel="stylesheet" href="hw3.css">
+<style>
+    p {
+        margin-left: 10px;
+        display:inline-block;
+        padding-right:20px;
+    }
+
+    label {
+        display:inline-block;
+        width:auto;
+        margin-left: 10px;
+    }
+
+
+</style>
+<script>
+
+    function ctoF() {
+
+        var cel, fah;
+
+        cel = parseInt(document.getElementById("targetNum").value);
+
+        if (isNaN(cel)==true) {
+            alert("Please input a number");
+            document.getElementById("targetNum").value="";
+            
+
+        } else {
+        fah = (9/5 * cel) + 32;
+        document.getElementById("result").value=Math.round(fah).toString() + " F";
+        };
+    }
+
+    function ftoC() {
+
+        var cel, fah;
+
+        fah = parseInt(document.getElementById("targetNum").value);
+
+        if (isNaN(cel)==true) {
+            alert("Please input a number");
+            document.getElementById("targetNum").value="";
+
+        } else {
+       
+        cel = 5/9 * (fah - 32);
+        document.getElementById("result").value=Math.round(cel).toString() + " C";
+        }
+}
+</script>
+</head>
+<body>
+
+<header>
+    <h1>Part 3: Temperature Conversion</h1>
+</header>
+
+<section>
+   <label for="targetNum">Input the Temperature: </label>
+   <input type="number" id="targetNum"  name="targetNum"><br>
+
+    <p>C = 5/9 * (F - 32) </p>
+    <p>F = (9/5 * C) + 32</p><br>
+
+   <input type="button" onclick="ctoF()"  style="margin:10px;" value ="Convert from Celsius to Farenheit" >
+   <input type="button" onclick="ftoC()" value ="Convert from Farenheit to Celsius" ><br><br>
+
+   <label for="result">The Result is: </label>
+   <input type="text" id="result" name="result" readonly><br><br>
+
+    <a href="index.html">Back to the main page</a>
+</section>
+
+<footer>
+</footer>
+
+</body>
+
+</html>

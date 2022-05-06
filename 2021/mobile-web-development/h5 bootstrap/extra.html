@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+  <meta charset="UTF-8" />
+
+  <title>ABC Toys - Extra</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+</head>
+<style>
+
+
+  
+    header {
+    background-color: rgb(250, 143, 143);
+    color:rgb(39, 27, 27);
+    padding:0.5rem;
+    margin:0;
+
+  }
+
+  h1,h3 {
+    margin:0;
+    padding:0 .5rem;
+  }
+  
+  nav div{
+    margin:10px 0;
+  }
+  
+  form div,table {
+    margin: 0 .5rem;
+  }
+
+  body {
+    min-width: 360px;
+  }
+
+  .fa-bars {
+  color:white;
+}
+
+  a {
+
+  color:white
+  }
+
+  a:hover {
+    color:rgb(250, 143, 143);
+    text-decoration: none;
+  }
+
+ 
+ 
+  table {
+    max-width: 360px;
+    
+
+}
+
+#mobTab {
+   visibility: visible;
+ }
+
+ #deskTab {
+   visibility: collapse;
+ }
+  @media (min-width:768px) {
+
+   body{
+     width:800px;
+     margin:0 auto;
+   }
+    
+   table {
+   
+    max-width:700px
+ }
+
+ td {
+   padding:10px 15px;
+ }
+
+ #mobTab {
+   visibility: collapse;
+ }
+
+ #deskTab {
+   visibility: visible;
+ }
+  }
+</style>
+<body>
+ 
+
+
+  <nav class="navbar navbar-expand-lg bg-dark sticky-top">
+
+    <a class="navbar-brand" href="index.html">ABC Toys</a>
+  
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#menulist">
+    
+      <i class="fa fa-bars" aria-hidden="true"></i>
+    </button>
+  
+      <div class="collapse navbar-collapse justify-content-end" id="menulist">
+        <ul class="navbar-nav">
+          <li class="btn btn-dark nav-item mr-auto pl-0" ><a class="nav-link" href="index.html">Home</a></li>
+          <li class="btn btn-dark nav-item mr-auto pl-0" ><a class="nav-link" href="products.html">Products</a></li>
+          <li class="btn btn-dark nav-item mr-auto pl-0" ><a class="nav-link" href="contact.html">Contact Us</a></li>
+          <li class="btn btn-dark nav-item mr-auto pl-0" ><a class="nav-link" href="location.html ">Location</a></li>
+          <li class="btn btn-dark nav-item mr-auto pl-0" ><a class="nav-link" href="extra.html">Extra</a></li>
+        </ul>
+      </div>
+  </nav>
+
+<section class="container">
+  <br>
+ 
+  <h3>3 Capabilities Offered by WURFL</h3>
+  <br>
+<table class="table table-sm table-hover table-striped" id="deskTab">
+  <thead>
+    <tr>
+      <th scope="col">Capability</th>
+      <th scope="col">Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td scope="row">form_factor</td>
+      <td scope="row"><p>You can check if a device is a smartphone by testing this capability. See code below:</p>
+        <p class="fw-lighter">if (WURFL.is_mobile === true && WURFL.form_factor === "Smartphone"){<br>//targetSmartPhoneDevices();<br>}</p>
+      </td>
+    </tr>
+    <tr>
+      <td scope="row">complete_device_name</td>
+      <td scope="row"><p>You can test an individual iPhone model (Full iPhone model is only available in commercial WURFL.js Basic, Standard, or Pro licenses). See code below:</p>
+        <p class="fw-lighter">if (WURFL.complete_device_name === "Apple iPhone XR") {<br>//targetAppleiPhoneXR();<br>}</p></td>
+    </tr>
+    <tr>
+      <td scope="row">advertised_browser</td>
+      <td scope="row">You can infers the name of the browser based on user-agent string analysis(possibly the analysis of other HTTP headers and WURFL capabilities</td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="table table-sm table-hover table-striped" id="mobTab">
+ 
+  <tbody>
+    <tr>
+      <td scope="row">form_factor</td>
+    </tr>
+    <tr>
+      <td scope="row"><p>You can check if a device is a smartphone by testing this capability. See code below:</p>
+        <p class="fw-lighter">if (WURFL.is_mobile === true && WURFL.form_factor === "Smartphone"){<br>//targetSmartPhoneDevices();<br>}</p>
+      </td>
+    </tr>
+    <tr>
+      <td scope="row">complete_device_name</td>
+    </tr>
+    <tr>
+      <td scope="row"><p>You can test an individual iPhone model (Full iPhone model is only available in commercial WURFL.js Basic, Standard, or Pro licenses). See code below:</p>
+        <p class="fw-lighter">if (WURFL.complete_device_name === "Apple iPhone XR") {<br>//targetAppleiPhoneXR();<br>}</p></td>
+    </tr>
+    <tr>
+      <td scope="row">advertised_browser</td>
+    </tr>
+    <tr>
+      <td scope="row">You can infers the name of the browser based on user-agent string analysis(possibly the analysis of other HTTP headers and WURFL capabilities</td>
+    </tr>
+  </tbody>
+</table>
+
+</section>
+    
+</body>
+
+</html>

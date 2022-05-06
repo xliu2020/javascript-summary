@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="description" content="summary of what this page is about">
+<title>Homework 4 - Part 2</title>
+<style>
+    table {
+        border-collapse: collapse;
+    }
+
+    table,th,td {
+        border:1px solid rgb(172, 152, 152);
+        background-color: rgb(182, 123, 123);
+    }
+
+    th {
+        color:white;
+        background-color: maroon;
+    }
+</style>
+</head>
+<body>
+
+<header>
+    <h1>CNIT 133 Homework 4 - Looping Statements - Part 2</h1>
+</header>
+
+<section>
+    <script>
+        var p=1000,a,n, output="";
+        
+        for (var r = 0.05; r <= 0.07; r=r+0.01) {
+            // document.writeln(r.toFixed(2) + "<br>");
+             
+                output="<table>";
+                output+="<tr><th>Year</th><th>Amount on deopsit</th> <th>Interest Rate</th>";
+            for(var n = 1; n <=10; n++) {
+                a = p * (1+r)**n;
+                
+                output+="<tr><td>"+ n + "</td><td>" + a.toFixed(2) +"</td><td>" + r.toFixed(2)+ "</td></tr>";
+            }
+            output+= "</table><br>";
+            document.writeln(output);
+        }
+    </script>
+    <a href="../hw4/hw4.html">Back to Homework 4</a>
+</section>
+
+<footer>
+</footer>
+
+</body>
+
+</html>

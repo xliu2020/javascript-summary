@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="description" content="summary of what this page is about">
+<title>Homework 7 -- Object Model and Miscellaneous jQuery</title>
+<script src="jquery.js"></script>
+
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
+
+
+<script>
+    $(document).ready(function() {
+       $('form :radio').click(
+           function() {
+               $('body').css($(this).attr("name"), $(this).val());
+           }
+       )
+       $('form :button').click(
+           function() {
+               $('form').css($(this).attr("name"), $(this).val());
+           }
+       )
+       $('form :checkbox').change(
+           function() {
+               
+               $('form').css($(this).attr("name"), this.checked ? $(this).val() : "" );
+                
+           }
+       )
+    });
+</script>
+<style>
+
+    .blue {
+        background-color: rgb(127, 183, 233);
+    }
+
+    .orange {
+        background-color: rgb(250, 204, 118);
+    }
+
+    .purple {
+        background-color: rgb(240, 166, 240);
+    }
+
+    .large {
+        font-size: large;
+    }
+
+    .medium {
+        font-size: medium;
+    }
+
+    .small {
+        font-size: small;
+       
+    }
+
+    .light {
+        font-weight: lighter;
+    }
+
+    .normal {
+        font-weight: normal;
+    }
+
+    body {
+        font-family: 'Roboto', sans-serif;
+    }
+
+    h2 {
+        background: url(down-arrow.png) no-repeat ;
+        background-position: left;
+        cursor:pointer;
+        background-size:10px 10px;
+        padding-left:15px;
+    }
+
+   .close {
+        background:url(upload.png) no-repeat;
+        background-size:10px 10px;
+        background-position: left;
+    }
+    
+    a {
+        text-decoration: none;
+        display: inline-block;
+        margin-top:15px;
+      padding-right:20px;
+      color:rgb(21, 87, 145);
+    }
+
+    a:hover {
+        color:rgb(221, 82, 140);
+    }
+</style>
+</head>
+<body>
+
+<header>
+    <h1>CNIT 133 Homework 7 - Part 1 Select a page layout and formats</h1>
+
+</header>
+
+<section>
+    <form>
+        
+        <p>Please choose one color for your background color:</p>
+        <input type="radio" id="blue" name="background-color" value="rgb(105, 172, 231)">
+        <label for="blue">Blue</label><br>
+        <input type="radio" id="orange" name="background-color" value="rgb(250, 204, 118)">
+        <label for="orange">Orange</label><br>
+        <input type="radio" id="purple" name="background-color" value="rgb(240, 166, 240)">
+        <label for="purple">Purple</label><br>
+
+        <br>
+        <p>Please click one button to choose the font style: </p>
+        <input type="button" value="100" id="lighter" name="font-weight">
+        <input type="button" value="300" id="bolder" name="font-weight">
+        <input type="button" value="700" id="normal" name="font-weight">
+
+        <br>
+        <br>
+        <p>Please choose one font size:</p>
+        <input type="checkbox" value="small" id="small" name="font-size">      
+        <label for="fsize">Small</label>
+        <input type="checkbox" value="medium" id="medium" name="font-size">
+        <label for="fsize">Medium</label>
+        <input type="checkbox" value="large" id="large"
+         name="font-size">
+         <label for="fsize">Large</label>
+        
+    </form>
+</section>
+
+<footer>
+    <a href="hw7.html">Back to Last Page</a>
+    
+</footer>
+
+</body>
+
+</html>

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="description" content="summary of what this page is about">
+<title>Homework 4 - Extra Credit</title>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script>
+    $(document).ready(function() {
+        $("#size").focus();
+    });
+
+
+    function process() {
+
+        var row = parseInt(document.getElementById("size").value);
+        var output = "";
+
+        if (row < 2 || row >10 || isNaN(row)==true) {
+            alert("The size must between 2 and 10 inclusive.")
+            document.getElementById("size").value="";
+        } else {
+            // for (var i=1; i<=row; i++) {
+            //     // output += ("*"); 
+            //     for (var stars=1; stars<=row; stars++) {
+            //         if(i===1 || i=== row || stars===1 || stars===row ) {
+            //             output+="*";
+            //         } else {
+            //             output+=" ";
+            //         }
+            //     } 
+            output+="<pre>" 
+            for (var i=0; i <row; i++) {
+                output +="*" 
+            };
+                
+            for (var stars=0; stars<row-2; stars++) {
+                output+="<br>";
+                output+="*";
+                for (var space=0; space<row-2;space++) {
+                    output+=(" ");
+                };
+                output+="*";
+            };
+
+            output+="<br>";
+
+            for (var i=0; i <row; i++) {
+                output +="*" 
+            };
+            
+            output+="</pre>"
+            }
+                document.getElementById("ans").innerHTML=output;        
+        
+    };
+
+    
+
+    function process1() {
+        document.getElementById("ans").innerHTML="";
+        console.log("hi");
+    };
+   
+    // var res= document.getElementById("clear");
+
+    
+    // res.onclick = function() {
+    //     document.getElementById("ans").innerHTML = "";
+    // };
+  
+ 
+      
+    
+ 
+ </script>
+<style>
+    #ans {
+        
+        width:100px;
+        background-color: rgb(46, 102, 83);
+        color:azure;
+        margin:10px;
+        padding:0px 10px;
+        text-align: center;
+    }
+</style>
+</head>
+<body>
+
+<header>
+    <h1>CNIT 133 Homework 4 - Looping Statements - Extra Credit</h1>
+</header>
+
+<section>
+    <form id="myform">
+        <label for="size">The size of the side of a square is: </label>
+        <input type="text" id="size">
+        <input type="button" onclick="process()" value="Submit" id="submit">
+
+        <input type="reset" onclick="process1()" value="Reset">
+     
+    </form>
+    <div id="ans"></div>
+    <a href="hw4.html">Back to Homework 4</a>
+</section>
+
+<footer>
+</footer>
+
+</body>
+
+</html>

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="description" content="summary of what this page is about">
+<title>CNIT 133 Homework 5 - Arrays</title>
+<style>
+    #myform label.error {
+        color:red;
+        display:block;
+
+    }
+    section,a {
+        margin-left:10px;
+    }
+
+    form {
+          border:2px rgb(131, 32, 32) solid;
+          padding: 20px;
+          margin-bottom: 10px;
+          width:fit-content;
+    }
+    
+    a {
+        text-decoration: none;
+    }
+</style>
+<script src="https://code.jquery.com/jquery-1.10.1.js"></script>
+<script src="jquery-validation-1.19.3/dist/jquery.validate.min.js"></script>
+
+<script>
+  $(document).ready(function() {
+      $("#myform").validate({
+          rules: {
+              username:"required",
+              rating:"required",
+              improvement:{
+                  required:true
+              },
+              channel:{
+                  required:true
+              }
+          },
+
+          messages: {
+              username:{
+                  required:"Please enter your name",
+              },
+              rating:{
+                  required:"Please choose a rating",
+              },
+              improvement:{
+                  required:"Please check at least one checkbox",
+              },
+              channel:{
+                  required:"Please choose one from the options",
+              },
+          },
+          errorPlacement: function(error, element) {
+              if (element.is(":radio") || element.is(":checkbox")) {
+                  error.appendTo(element.parent());
+              } else {
+                  error.insertAfter(element);
+              }
+          }
+      })
+  });
+</script>
+</head>
+<body>
+
+<header>
+    <h1>CNIT 133 Homework 5 - Arrays - Part 1</h1>
+</header>
+
+<section>
+    
+    <form id="myform" method="post" action="respond.html">
+        
+        <table>
+            <div>
+                <label>Your Name: </label>
+                <input type="text" placeholder="input here" autofocus="autofocus" id="username" name="username"><br><br>
+            </div>
+            <div>
+                <label>How do you think of our service?</label><br> 
+                <input type="radio" name="rating">Very Satisfied<br>
+                <input type="radio" name="rating">Satisfied<br>
+                <input type="radio" name="rating">Not Bad<br>
+                <input type="radio" name="rating">Unsatisfied
+            </div>
+
+            <br>
+
+            <div>
+                <label>Which part do you think that we are not doing well? (Select one or more)</label><br>
+                <input type="checkbox" name="improvement">Environment<br>   
+                <input type="checkbox" name="improvement">Price<br>
+                <input type="checkbox" name="improvement">food quality<br>
+                <input type="checkbox" name="improvement">Hygiene and Safety
+             </div>  
+
+            <br>
+             
+            <div>
+                <label>In which way do you learn about our restaurant?</label><br>
+                <select name="channel">
+                    <option value="">Choose one</option>
+                    <option value="online">Online</option>
+                    <option value="newspaper">Newspaper</option>
+                    <option value="socialmedia">Social Media</option>
+                    <option value="friends">Recommended by Friends</option>
+                </select>
+            </div>
+            
+            <br>
+            
+            <div>
+                <input type="submit" value="Submit">
+                <input type="reset" value="Reset">
+            </div>    
+        </table>
+    </form>
+  
+</section>
+
+<a href="hw5.html">Back to Mainpage</a>
+<footer>
+</footer>
+
+</body>
+
+</html>

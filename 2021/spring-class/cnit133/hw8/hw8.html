@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="description" content="summary of what this page is about">
+
+<title>Homework 8 - Ajax Applications</title>
+<style>
+    #research {
+        background-color: aliceblue;
+        padding:20px;
+        width:fit-content;
+    }
+
+    h2 {
+        margin-top: 0px;
+    }
+
+    th,td {
+        padding:5px;
+        text-align: center;
+    }
+</style>
+<script>
+    function showHint(str) {
+        if (str.length == 0) {
+            document.getElementById("txtHint").innerHTML ="";
+            return;
+        } else {
+            var xmlhttp = new XMLHttpRequest();
+            xmlhttp.onreadystatechange = function() {
+
+                if (this.readyState == 4 && this.status == 200) {
+                    document.getElementById("txtHint").innerHTML = this.responseText;
+                }
+            }
+            xmlhttp.open("GET", "gethint.php?q="+str, true);
+            xmlhttp.send();
+        }
+    }
+</script>
+</head>
+<body>
+
+<header>
+    <h1>CNIT 133 Homework 8 - Ajax Applications</h1>
+</header>
+
+<section>
+    <p>Please type your first name below:</p>
+    <form action=''>
+        <label for="fname">First name:</label>
+        <input type="text" id="fname" name="fname" onkeyup="showHint(this.value)">
+    </form>
+    <p>Suggestions here:<span id="txtHint"></span></p>
+    
+        <div id=research>
+            <h2>API Research</h2>
+            <table>
+                <tr>
+                    <th>Type of Respond File</th>
+                    <th>If any Type of key is needed </th>
+                    <th>Link to Documentation of API</th>
+                </tr>
+                <tr>
+                    <td>JSON</td>
+                    <td>Yes.Need to register for API key</td>
+                    <td>https://newsapi.org/?ref=apilist.fun</td>
+                </tr>
+        </div>
+    </table>
+    <a href="../hw1/index.html">Back to Homepage</a>
+</section>
+
+<footer>
+</footer>
+
+</body>
+
+</html>

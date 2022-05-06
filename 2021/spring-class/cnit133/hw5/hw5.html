@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="description" content="summary of what this page is about">
+<title>CNIT 133 Homework 5 - Arrays</title>
+<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script>
+      $(function() {
+          $("#tabs").tabs({
+              event:"mouseover",
+              
+          });
+      });
+    
+  </script>
+  <style>
+      
+    
+     /* change the tab menu color */
+      #tabs .ui-widget-header{
+        background-color:rgb(177, 72, 90);
+        background-image:none;
+       
+        
+}
+    /* the tab font color */
+        #tabs .ui-state-default a  { 
+    color: white; }  
+
+    /* #tabs.ui-state-hover a, .ui-state-focus a {
+        color:rgb(42, 165, 114);
+      } */
+      
+     /* change the font color when hover the mouse on the tab  */
+      #tabs .ui-state-active a, div>a:hover{
+          color:rgb(133, 34, 34);
+      }
+      li a{
+        background-color: rgb(248, 212, 93);
+        
+             
+      }
+
+      a {
+        text-decoration: none;
+        width:fit-content;
+      }
+
+      #tabs {
+          width:600px;
+          border:2px rgb(155, 106, 106) solid;
+            
+          margin-bottom: 10px;
+      }
+  </style>
+</head>
+<body>
+
+<header>
+    <h1>CNIT 133 Homework 5 - Arrays</h1>
+</header>
+
+<section>
+    <div id="tabs" >
+        <ul>
+            <li><a href="#tabs-1">Part 1</a></li>
+            <li><a href="#tabs-2">Part 2</a></li>
+            <li><a href="#tabs-3">Part 3</a></li>
+        </ul>
+        <div id="tabs-1">
+            <p>Part 1 simulates a survey to a restaurant. This is a webpage containing a form that displays an input text box, raido buttons, checkboxes, and select items as well as a script that executes form validation.  </p>
+            <a href="part1.html">=> Go to Part 1</a>
+        </div>
+        <div id="tabs-2">
+            <p>Part 2 is a webpage containing 2 pulldown menus, one using onchage event handler and one utilizing a button with a onclick event handler.</p>
+            <a href="part2.html">=> Go to Part 2</a>
+        </div>
+        <div id="tabs-3">
+            <p>Part 3 is a website that enables the user to enter a state name about several states, which allows you to input full or just the two characters that represent the state and both uppercase and lowercase acceptable. After the input, the State Name, State Captical and population will be displayed in a textarea.</p>
+            <a href="part3.html">=> Go to Part 3</a>
+        </div>
+    </div>
+    <a href="../hw1/index.html">Back to Homepage</a>
+</section>
+
+<footer>
+</footer>
+
+</body>
+
+</html>
